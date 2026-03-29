@@ -1,0 +1,611 @@
+/* ==========================
+   CSS Variables (Design Tokens)
+   ========================== */
+:root {
+    --color-primary: #2B823A; /* Verde Institucional */
+    --color-primary-dark: #1F6B2A;
+    --color-bg-light: #FFFFFF;
+    --color-bg-cream: #FDFBF7;
+    --color-text-dark: #2C3E50;
+    --color-text-light: #666666;
+    --color-white: #FFFFFF;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --transition-fast: 0.2s ease-in-out;
+    --transition-normal: 0.4s ease-in-out;
+    --transition-slow: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 40px rgba(43, 130, 58, 0.15);
+}
+
+/* ==========================
+   Reset & Base Styles
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--color-text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.bg-cream { background-color: var(--color-bg-cream); }
+.mt-4 { margin-top: 1.5rem; }
+
+/* ==========================
+   Buttons
+   ========================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition-normal);
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* ==========================
+   Navbar
+   ========================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: var(--transition-normal);
+}
+
+.navbar.scrolled {
+    padding: 12px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-white);
+    letter-spacing: 1px;
+}
+
+.navbar.scrolled .logo {
+    color: var(--color-primary);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--color-text-dark);
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-menu .btn {
+    margin-left: 10px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-white);
+}
+
+.navbar.scrolled .bar {
+    background-color: var(--color-primary);
+}
+
+/* ==========================
+   Hero Section
+   ========================== */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    color: var(--color-white);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--color-white);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* ==========================
+   Productos Section
+   ========================== */
+.productos {
+    padding: 100px 0;
+}
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-normal);
+    opacity: 1;
+}
+
+.product-card.hidden {
+    display: none;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-img-wrapper {
+    width: 100%;
+    height: 380px; 
+    overflow: hidden;
+    position: relative;
+    background-color: #FAFAFA;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Para que la imagen del queso no se recorte */
+    padding: 20px;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    padding: 30px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.product-info p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   Empresa Section
+   ========================== */
+.empresa {
+    padding: 100px 0;
+}
+
+.container-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.empresa-text p {
+    margin-bottom: 20px;
+    color: var(--color-text-light);
+}
+
+.empresa-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-box {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border-top: 4px solid var(--color-primary);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--color-primary);
+}
+
+.stat-text {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    font-weight: 500;
+}
+
+/* ==========================
+   Certificaciones Section
+   ========================== */
+.certificaciones {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.cert-card {
+    padding: 30px 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: var(--transition-fast);
+}
+
+.cert-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-soft);
+}
+
+.cert-card h4 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.cert-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+/* ==========================
+   Contacto & Footer
+   ========================== */
+.footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-cream);
+    padding: 80px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-brand {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.contact-list li {
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    background: var(--color-primary);
+}
+
+.footer-form h3 {
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255,255,255,0.1);
+}
+
+.form-group select option {
+    background-color: var(--color-text-dark);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-status {
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    color: #2ecc71;
+}
+
+/* ==========================
+   Animations
+   ========================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================
+   Responsive
+   ========================== */
+@media (max-width: 992px) {
+    .container-split, .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--color-white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 30px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        color: var(--color-text-dark) !important;
+        margin: 15px 0;
+        display: block;
+    }
+    
+    .navbar.scrolled .logo {
+        color: var(--color-primary);
+    }
+    
+    .navbar .logo {
+       color: var(--color-primary);
+    }
+    
+    .navbar .bar {
+        background-color: var(--color-primary);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .product-img-wrapper {
+        height: 280px; 
+    }
+}

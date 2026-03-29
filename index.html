@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lactear S.A. | Sabor que trasciende fronteras</title>
+    <meta name="description" content="Lactear S.A. transforma parte de la materia prima de la cuenca lechera más importante de Sudamérica en productos de excelencia, con calidad y tecnología de vanguardia.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Lactear</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#empresa" class="nav-link">Empresa</a></li>
+                <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
+                <li><a href="#contacto" class="btn btn-primary nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero" style="background-image: linear-gradient(rgba(43, 130, 58, 0.7), rgba(44, 62, 80, 0.6)), url('assets/images/hero_bg_1774741305119.png');">
+        <div class="container hero-content">
+            <h1 class="reveal">Sabor que trasciende fronteras</h1>
+            <p class="reveal">Tradición, calidad y tecnología para llevar la excelencia de nuestra tierra a tu mesa.</p>
+            <a href="#productos" class="btn btn-primary reveal">Descubrí Nuestros Quesos</a>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2 class="section-title reveal">Catálogo Premium</h2>
+            <p class="section-subtitle reveal">Quesos y lácteos elaborados con 100% leche de tambos propios, garantizando sabor y frescura en cada ocasión.</p>
+            
+            <div class="product-filters reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="semi-duros">Semi Duros</button>
+                <button class="filter-btn" data-filter="duros">Duros</button>
+                <button class="filter-btn" data-filter="blandos">Blandos especiales</button>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card reveal" data-category="semi-duros">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/cheese_mozzarella_1774741318093.png" alt="Queso Mozzarella Lactear" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Mozzarella Premium</h3>
+                        <p>Descubra nuestra Mozzarella de pasta hilada. Su textura suave, húmeda y elástica, junto con un fundido perfecto, la convierten en la estrella de la auténtica cocina mediterránea.</p>
+                        <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card reveal" data-category="duros">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/cheese_sardo_1774741335157.png" alt="Queso Sardo Lactear" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sardo Tradicional</h3>
+                        <p>Nuestro queso duro clásico, con una textura ligeramente granulada y sabor intenso. Perfecto para rallar y realzar el carácter de cualquier plato gourmet.</p>
+                        <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card reveal" data-category="blandos">
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/cheese_azul_1774741567459.png" alt="Queso Azul Lactear" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Queso Azul</h3>
+                        <p>Un deleite para el paladar más exigente. Cremoso y con un marmoleado de vetas azul verdosas; su sabor picante e inolvidable elevará sus recetas e infusiones.</p>
+                        <a href="#contacto" class="btn btn-outline">Solicitar Cotización</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empresa Section -->
+    <section id="empresa" class="empresa bg-cream">
+        <div class="container container-split">
+            <div class="empresa-text reveal">
+                <h2 class="section-title text-left">Nuestra Historia</h2>
+                <p>Hace más de 15 años, cinco familias con fuertes raíces lecheras se unieron en Morteros, Córdoba, con un propósito común: dar valor a la leche a través de productos de calidad excepcional y sabor inigualable.</p>
+                <p>Hoy, nuestro compromiso con la mejora continua nos ha convertido en una empresa exportadora consolidada. Llevamos nuestros exquisitos quesos y variantes de leche y suero en polvo a mercados internacionales como Brasil, Rusia, China, y más allá.</p>
+                <a href="#contacto" class="btn btn-primary mt-4">Conectá con nosotros</a>
+            </div>
+            <div class="empresa-stats reveal">
+                <div class="stat-box">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-text">Años de Trayectoria</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-text">Tambos Propios</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-text">Países Exportados</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">Top</span>
+                    <span class="stat-text">Calidad Premium</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones Section -->
+    <section id="certificaciones" class="certificaciones">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Calidad y Certificaciones</h2>
+            <p class="section-subtitle reveal">Procesos rigurosos y los más altos estándares nacionales e internacionales avalan nuestra excelencia.</p>
+            <div class="cert-grid reveal">
+                <div class="cert-card">
+                    <h4>BPM</h4>
+                    <p>Buenas Prácticas de Manufactura en planta.</p>
+                </div>
+                <div class="cert-card">
+                    <h4>HACCP SENASA</h4>
+                    <p>Análisis de Peligros y Puntos Críticos de Control.</p>
+                </div>
+                <div class="cert-card">
+                    <h4>HALAL</h4>
+                    <p>Cumplimiento de normas alimentarias islámicas.</p>
+                </div>
+                <div class="cert-card">
+                    <h4>Sin TACC</h4>
+                    <p>Alimentos Libres de Gluten garantizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section & Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info reveal">
+                <h2 class="footer-brand">Lactear S.A.</h2>
+                <p>Tradición y calidad en cada bocado.</p>
+                <ul class="contact-list">
+                    <li>📍 Ruta Provincial 1 Km 14, Morteros, Córdoba, AR</li>
+                    <li>✉️ atencionalcliente@lactear.com</li>
+                    <li>📞 +54 3562 405967</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/lactearok/" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/lactear" target="_blank">Facebook</a>
+                    <a href="https://ar.linkedin.com/company/lactear" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-form reveal">
+                <h3>Envíanos tu consulta</h3>
+                <form id="contactForm" class="form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Nombre Completo">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Correo Electrónico">
+                    </div>
+                    <div class="form-group">
+                        <select id="reason" required>
+                            <option value="">Motivo de consulta...</option>
+                            <option value="ventas_locales">Ventas Locales</option>
+                            <option value="exportacion">Exportación / B2B</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" required placeholder="Tu mensaje..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lactear S.A. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
